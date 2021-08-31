@@ -1,7 +1,9 @@
-jekyll:
-    image: jekyll/jekyll:latest
+version: "1.0"
+services:
+  jekyll:
+    build: .
     command: jekyll serve --force_polling
     ports:
-        - 4000:4000
+    - "4000:4000"
     volumes:
-        - .:/srv/jekyll
+    - .:/srv/jekyll
