@@ -56,8 +56,10 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
+    formatter: Rouge::Formatters::HTMLLineTable
     block:
       line_numbers: true
+    default_lang: python
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
