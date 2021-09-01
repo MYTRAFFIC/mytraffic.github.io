@@ -11,7 +11,27 @@ To write a new post you need to do the following:
 - add your post's images to the `assets/images` directory
 - add your author profile to the `_config.yml` file if it is not there yet
 
+If you need to customize the layout, you can modify the html templates.
+The site build process uses the well maintained [jekyll](https://jekyllrb.com/docs/).
+You can refer to the official documentation should you need any customization.
 
-### Testing locally
 
-You can run the site locally by doing `docker compose up`
+### Render the site locally
+
+You can run the site locally by doing `docker compose up`.
+It will automatically rebuild the site if you modify some posts or layout.
+However it does not rebuild when you change the `_config.yml` file.
+You can restart the docker in this case.
+
+
+### Deploying
+
+When you push to the `main` branch, the site is automatically deployed by [github pages](https://pages.github.com/), which knows how to deal with jekyll static sites.
+
+
+### Useful resources
+
+- [jekyll](https://jekyllrb.com/docs/)
+- The repository of the [original theme](https://github.com/wowthemesnet/mediumish-theme-jekyll)
+- You can find great illustrations for your posts on [Unsplash](https://unsplash.com/)
+- If needed you can build an avatar on [avatarmaker](https://avatarmaker.com/)
