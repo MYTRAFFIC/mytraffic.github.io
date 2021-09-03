@@ -19,15 +19,15 @@ authors:
     email: sdiemer@mytraffic.fr
     twitter: https://twitter.com/sebdiem
     description: "CTO at mytraffic since 2019"
-  john:
-    name: John
-    display_name: John    
-    avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+  awendlinger:
+    name: awendlinger
+    display_name: 'Antoine Wendlinger'
+    email: awendlinger@mytraffic.fr
+    avatar: 'assets/images/awendlinger.png'
+    description: |
+      Data Engineering lead at MyTraffic.
+      I love good code, good food, and nitpicking about naming :)
+
 
 # Plugins
 plugins:
@@ -36,7 +36,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-    
+
 # Archives
 jekyll-archives:
   enabled:
@@ -44,11 +44,11 @@ jekyll-archives:
   layout: archive
   permalinks:
     category: '/category/:name/'
-    
-# Pagination 
+
+# Pagination
 paginate: 6
 paginate_path: /page:num/
-    
+
 # Other
 markdown: kramdown
 
@@ -58,7 +58,6 @@ kramdown:
   syntax_highlighter_opts:
     formatter: Rouge::Formatters::HTMLLineTable
     block:
-      line_numbers: true
     default_lang: python
 
 # Lazy Images ("enabled" or "disabled")
