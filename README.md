@@ -18,8 +18,9 @@ You can refer to the official documentation should you need any customization.
 
 ### Render the site locally
 
-You can run the site locally by doing `docker compose up`.
-It will automatically rebuild the site if you modify some posts or layout.
+You can run the site locally by doing `docker-compose up`. The site will be available at [http://localhost:4000](http://localhost:4000),
+and will automatically be rebuilt if you modify some posts or layout.
+
 However it does not rebuild when you change the `_config.yml` file.
 You can restart the docker in this case.
 
