@@ -109,7 +109,7 @@ def perform_nested_loop_join(
     return results
 
 def make_result(employee: Employee, company: Company) -> Result:
-    return Result(employee.id, company.id, company.name)
+    return Result(id=employee.id, name=employee.name, company_name=company.name)
 ```
 
 Let `N` the number of employees, `M` the number of companies. The time complexity is `O(N * M)` with no additinal memory required. If there are a lot of companies and/or employees, this is going to be really slow. But it still has some legitimate use cases:
@@ -196,7 +196,7 @@ If you only look at asymptotic complexity, hash join looks like a clear winner. 
 
 - If the inputs are already sorted, use a sort-merge join.
 - If you already have a hash table on the columns used for the join condition for one of you datasets, use hash join.
-- If one of your datasets is small enough (small enough meaning "creating a hash table won't blow your memory budget), use hash join.
+- If one of your datasets is small enough (small enough meaning "creating a hash table won't blow your memory budget"), use hash join.
 - ~~If you are feeling adventurous, use a nested loop join~~
 - Else, use sort-merge join.
 
@@ -211,4 +211,4 @@ But BTrees are not the only index types: you can also create hash indexes. With 
 
 ## Closing words
 
-Thank you for reading this article! I hope I helped demystify a component we too-often treat as a complete black box. This article was limited a very simple case, but the algorithms generalize well to other situations: the code would be more complicated in order to deal with edge cases, but the algorithms stay the same. If you want to deep dive into the inner workings of relational database, I strongly recommend [Use the index Luke](https://use-the-index-luke.com/).
+Thank you for reading this article! I hope I helped demystify a component we too-often treat as a complete black box. This article was limited to a very simple case, but the algorithms generalize well to other situations: the code would be more complicated in order to deal with edge cases, but the algorithms stay the same. If you want to deep dive into the inner workings of relational database, I strongly recommend [Use the index Luke](https://use-the-index-luke.com/).
