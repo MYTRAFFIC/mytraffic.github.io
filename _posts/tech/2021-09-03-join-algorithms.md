@@ -195,10 +195,10 @@ Note that if the input datasets are already sorted, this has the same time compl
 If you only look at asymptotic complexity, hash join looks like a clear winner. However, hash tables consume *a lot* of memory, which can be a no-go if your datasets are big, so it depends on your use case:
 
 - If the inputs are already sorted, use a sort-merge join.
-- If you already have a hash table on the columns used for the join condition for one of you datasets, use hash join.
-- If one of your datasets is small enough (small enough meaning "creating a hash table won't blow your memory budget"), use hash join.
+- If you already have a hash table on the columns used for the join condition for one of you datasets, use a hash join.
+- If one of your datasets is small enough (small enough meaning "creating a hash table won't blow your memory budget"), use a hash join.
 - ~~If you are feeling adventurous, use a nested loop join~~
-- Else, use sort-merge join.
+- Else, use a sort-merge join.
 
 
 {% include question.html content="Why in the world would I have a hash table on just the right columns lying around, or already sorted inputs?" %}
