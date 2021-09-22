@@ -1,57 +1,46 @@
 <!-- begin post -->
 {% assign author = site.authors[post.author] %}
 
-<div class="col-lg-4 col-md-6 mb-30px card-group">
-    <div class="card h-100">
-        <div class="maxthumb">
-            <a href="{{ site.baseurl }}{{ post.url }}">
-                {% if post.image %}
+<div class="post-card">
+    <div class="post-image">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            {% if post.image %}
+                <img class="post-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}"> 
+            {% endif %}
+        </a>
+    </div>
+    <div class="post-excerpt">
 
-                    {% if site.lazyimages == "enabled" %}
-                        <img class="img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-                    {% else %}
-                        <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}"> 
+        <!-- Post Categories -->
+        <div>
+            <ul class="tags">
+                {% assign sortedCategories = post.categories | sort %}
+                {% for category in sortedCategories %}
+                <li>
+                    {% if forloop.index > 1 %}
+                    |
                     {% endif %}
+                    {{ category }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-                {% endif %}
-            </a>
-        </div>
-        <div class="card-body">
-            <h2 class="card-title">
-                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                {% if post.rating %}
-                <div class="mb-2 mt-2 font-weight-normal">
-                {% include star_rating_postbox.html %}
-                </div>
-                {% endif %}
-            </h2>
-            <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</h4>
-        </div>
-        <div class="card-footer bg-white">
-            <div class="wrapfooter">
-                {% if post.author %}
-                <span class="meta-footer-thumb">
-                {% if author.avatar %}
-                <img class="author-thumb" src="{{site.baseurl}}/{{ author.avatar }}" alt="{{ author.display_name }}">
-                {% else %}
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
-                {% endif %}
-                </span>
-                <span class="author-meta">
-                <span class="post-name">
-                    {% if author.web %}
-                    <a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a>
-                    {% else %}
-                    {{ author.display_name }}
-                    {% endif %}
-                </span><br/>
-                {% endif %}
-                <span class="post-date">{{ post.date | date_to_string }}</span>
-                </span>
-                <span class="post-read-more"><a href="{{ site.baseurl }}{{ post.url }}" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-                <div class="clearfix"></div>
-            </div>
-        </div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt | strip_html | truncatewords:30 }}</p>
+        <p class="post-link">
+        {% if jekyll.environment == "dev" %}
+          {% assign base_url = site.baseurl %}
+        {% else %}
+          {% assign base_url = https://www.mytraffic.io/en %}
+        {% endif %}
+        <a class="link-dark" href="{{ base_url }}{{ post.url }}">
+            <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 11">
+                <path id="arrow-2" fill="none" fill-rule="evenodd" d="M0 9.968l4.934-4.365h0a.196.196 0 000-.294L0 .944"></path>
+            </svg>
+            Read the article
+        </a>
+        </p>
     </div>
 </div>
 <!-- end post -->

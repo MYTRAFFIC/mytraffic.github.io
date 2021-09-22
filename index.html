@@ -5,32 +5,16 @@ title: Home
 
 <!-- Posts Index
 ================================================== -->
-<section class="recent-posts">
-
-    <div class="section-title">
-
-        <h2><span>All Stories</span></h2>
-
-    </div>
-
-    <div class="row listrecent">
-
-        {% for post in paginator.posts %}
-
-        {% include postbox.html %}
-
-        {% endfor %}
-
-    </div>
-
-</section>
-
-<!-- Pagination
-================================================== -->
-<div class="bottompagination">
-<div class="pointerup"><i class="fa fa-caret-up"></i></div>
-<span class="navigation" role="navigation">
-    {% include pagination.html %}
-</span>
+<div style="min-height: 400px; background-color: #000; width: 100%; position: absolute;">
+<img style="width: 205px; position: absolute; left: 100px; top: 50px; z-index: 1;" src="/assets/images/mytraffic-decoration.svg">
 </div>
+</div>
+<div style="position: absolute; z-index: 2; width: 100%;">
+<section class="post-cards main-content">
+    {% for post in site.posts %}
 
+    {% include postbox.html %}
+
+    {% endfor %}
+</section>
+</div>

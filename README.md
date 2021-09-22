@@ -28,6 +28,7 @@ You can restart the docker in this case.
 ### Deploying
 
 When you push to the `main` branch, the site is automatically deployed by [github pages](https://pages.github.com/), which knows how to deal with jekyll static sites.
+The articles are then manually integrated on the www.mytraffic.io site (inside an iframe :/). For this you need to send the page url to Alexia so that she can create a new blog entry in prismic.
 
 
 ### Useful resources
