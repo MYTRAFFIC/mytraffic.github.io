@@ -3,9 +3,9 @@
 
 <div class="post-card">
     <div class="post-image">
-        <a href="{{ site.baseurl }}{{ post.url }}">
+        <a href="{{ post.url | absolute_url }}">
             {% if post.image %}
-                <img class="post-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}"> 
+            <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}"> 
             {% endif %}
         </a>
     </div>
@@ -29,12 +29,7 @@
         <h2>{{ post.title }}</h2>
         <p>{{ post.excerpt | strip_html | truncatewords:30 }}</p>
         <p class="post-link">
-        {% if jekyll.environment == "dev" %}
-          {% assign base_url = site.baseurl %}
-        {% else %}
-          {% assign base_url = https://www.mytraffic.io/en %}
-        {% endif %}
-        <a class="link-dark" href="{{ base_url }}{{ post.url }}">
+        <a class="link-dark" href="{{ post.url | absolute_url }}">
             <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 11">
                 <path id="arrow-2" fill="none" fill-rule="evenodd" d="M0 9.968l4.934-4.365h0a.196.196 0 000-.294L0 .944"></path>
             </svg>

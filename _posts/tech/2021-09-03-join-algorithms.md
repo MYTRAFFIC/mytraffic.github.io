@@ -3,7 +3,7 @@ title: "Join algorithms"
 author: awendlinger
 categories: [ tech ]
 layout: post
-image: assets/images/joins.jpg
+image: /assets/images/joins.jpg
 ---
 
 Chances are, if you have used SQL, you have used the JOIN keyword. But do you know how a JOIN is actually done? In this article, we will review different strategies used to perform the JOIN operation: the algorithms behind, their performance and memory trade-offs.

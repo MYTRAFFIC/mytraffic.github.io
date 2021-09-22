@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/{{ site.favicon }}">
+<link rel="icon" href="{{ site.favicon }}">
 
 <title>{{ page.title }} | {{site.name}}</title>
 
 {% seo %}
 
-<link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
+<link href="{{ '/assets/css/screen.css' }}" rel="stylesheet">
 
 <!-- defer loading of these non critical styles -->
-<link rel="preload" href="{{ site.baseurl }}/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="styles.css"></noscript>
+<link rel="preload" href="{{ '/assets/css/main.css' }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' }}"></noscript>
 
-<!-- This page will be integrated in an iframe. Tell the parent container its size -->
+<!-- This page will be integrated in an iframe. This script enables the page to tell the parent container its size -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.min.js"></script>
 <!-- This page will be integrated in an iframe. Open the links inside the parent -->
 <base target="_parent">
@@ -25,10 +25,6 @@
 
 
 <body>
-    <!-- defer loading of font and font awesome -->
-    <noscript id="deferred-styles">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    </noscript>
 
     {{ content }}
 

@@ -16,6 +16,12 @@ The site build process uses the well maintained [jekyll](https://jekyllrb.com/do
 You can refer to the official documentation should you need any customization.
 
 
+### Warning
+
+The site is aimed to be rendered in a iframe (inside www.mytraffic.io).
+So we use `<base target="_parent">` in the `<head>` to open links in the parent by default.
+If you want to make internal links, override this by setting `<a href="" target="_self">` manually.
+
 ### Render the site locally
 
 You can run the site locally by doing `docker-compose up`. The site will be available at [http://localhost:4000](http://localhost:4000),
@@ -28,7 +34,11 @@ You can restart the docker in this case.
 ### Deploying
 
 When you push to the `main` branch, the site is automatically deployed by [github pages](https://pages.github.com/), which knows how to deal with jekyll static sites.
-The articles are then manually integrated on the www.mytraffic.io site (inside an iframe :/). For this you need to send the page url to Alexia so that she can create a new blog entry in prismic.
+The articles are then manually integrated on the www.mytraffic.io site (inside an iframe :/).
+For this you need to send:
+    - the page url (e.g. `https://mytraffic.github.io/join-algorithms/`)
+    - the page name (e.g. `join-algorithms`)
+to Alexia so that she can create a new blog entry in prismic (these two fields are required).
 
 
 ### Useful resources

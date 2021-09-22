@@ -2,9 +2,10 @@
 name: "mytraffic tech & product blog"
 title: "mytraffic tech & product blog"
 description: "A collection of tech & product ideas from mytraffic"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
-baseurl: ''
+logo: '/assets/images/logo.png'
+favicon: '/assets/images/favicon.ico'
+url: 'https://www.mytraffic.io'
+baseurl: 'en/tech-post'
 include: ["_pages"]
 permalink: /:title/
 
@@ -13,7 +14,7 @@ authors:
   sdiemer:
     name: sdiemer
     display_name: Sébastien Diemer
-    avatar: 'assets/images/sdiemer.png'
+    avatar: '/assets/images/sdiemer.png'
     email: sdiemer@mytraffic.fr
     twitter: https://twitter.com/sebdiem
     description: "CTO at mytraffic since 2019"
@@ -21,7 +22,7 @@ authors:
     name: awendlinger
     display_name: 'Antoine Wendlinger'
     email: awendlinger@mytraffic.fr
-    avatar: 'assets/images/awendlinger.png'
+    avatar: '/assets/images/awendlinger.png'
     description: |
       Data Engineering lead at MyTraffic.
       I love good code, good food, and nitpicking about naming :)
