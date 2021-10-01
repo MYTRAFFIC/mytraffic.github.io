@@ -7,12 +7,16 @@ post_class: post-template
 
 {% assign author = site.authors[page.author] %}
 
-
+{% if jekyll.environment == "dev" %}
+  {% assign home = "" %}
+{% else %}
+  {% assign home = "/index" %}
+{% endif %}
 
 <div class="main-content article">
 <nav aria-label="Breadcrumb" class="breadcrumb">
     <ul>
-        <li><a href="{{ '/' | absolute_url }}">Tech blog</a></li>
+        <li><a href="{{ home | absolute_url }}">Tech blog</a></li>
         <li>{{ page.title }}</li>
     </ul>
 </nav>
