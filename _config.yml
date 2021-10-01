@@ -28,11 +28,10 @@ authors:
       I love good code, good food, and nitpicking about naming :)
 
 
-# Plugins
+# Plugins (should be available with github pages => https://pages.github.com/versions/)
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-seo-tag
 
 # Other
 markdown: kramdown
