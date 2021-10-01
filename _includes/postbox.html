@@ -27,7 +27,7 @@
         </div>
 
         <h2>{{ post.title }}</h2>
-        <p>{{ post.excerpt | strip_html | truncatewords:30 }}</p>
+        <p>{{ post.description }}</p>
         <p class="post-link">
         <a class="link-dark" href="{{ post.url | absolute_url }}">
             <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 11">

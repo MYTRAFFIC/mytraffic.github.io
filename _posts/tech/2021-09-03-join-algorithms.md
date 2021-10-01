@@ -3,6 +3,7 @@ title: "Join algorithms"
 author: awendlinger
 categories: [ tech ]
 layout: post
+description: "Chances are, if you have used SQL, you have used the JOIN keyword. But do you know how a JOIN is actually done?"
 image: /assets/images/joins.jpg
 ---
 
