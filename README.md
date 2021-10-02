@@ -18,9 +18,12 @@ You can refer to the official documentation should you need any customization.
 
 ### Warning
 
-The site is aimed to be rendered in a iframe (inside www.mytraffic.io).
-So we use `<base target="_parent">` in the `<head>` to open links in the parent by default.
-If you want to make internal links, override this by setting `<a href="" target="_self">` manually.
+The site is aimed to be rendered in a iframe (inside www.mytraffic.io) because you don't want to write inside prismic.
+That means that links are a bit "tricky":
+- we use `<base target="_parent">` in the `<head>` to open links in the parent by default
+- external links are ok with the above setting
+- internal links for internal resources (js, css, images) must be relative (but don't use the `relative_url` liquid filter that will add the prefix we have on www.mytraffic.io)
+- internal links `<a href=` should point to the final resource on www.mytraffic.io (absolute url, here you can (should?) use the `absolute_url` filter)
 
 ### Render the site locally
 
