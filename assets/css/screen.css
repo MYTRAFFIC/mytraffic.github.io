@@ -314,3 +314,6 @@ h1 span.post-date {
 .breadcrumb li:first-child::before {
     content: "";
 }
+.emoji {
+    display: inline;
+}
