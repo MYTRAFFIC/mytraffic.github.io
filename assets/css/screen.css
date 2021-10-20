@@ -183,11 +183,6 @@ ul.tags li a:hover {
     margin-right: auto;
 }
 
-.article-post ol,
-.article-post ul {
-    margin-bottom: 2rem;
-}
-
 .article-post ol ol,
 .article-post ul ul {
     list-style: disc;

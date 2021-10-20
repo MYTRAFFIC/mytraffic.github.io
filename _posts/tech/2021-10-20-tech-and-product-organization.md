@@ -7,7 +7,7 @@ image: assets/images/t&p-org.jpg
 description: "How our tech and product team works to build the best SaaS platform for our customers."
 ---
 
-Beginning of 2021 we completely rethought our Tech and Product organization.
+At the beginning of 2021 we completely rethought our Tech and Product organization.
 This article describes our motivations and the reasoning behind our current
 organization.
 
@@ -41,14 +41,16 @@ in our organization:
 - **lack of strategy and focus**: we tried to ship too much, too fast given the
   available team and the succession of features did not result from a clear
   company strategy
-- **output instead of outcome driven**: we were happy celebrating the release
-  of a new dashboard or a new pricing system (outputs) instead of considering
-  the real outcome on the key company metrics and on our customers
+- **output driven instead of outcome driven**: we were happy celebrating the
+  release of a new dashboard or a new pricing system (outputs) instead of
+  considering the real outcome on the key company metrics and our customers
 - **lack of ownership**: our tech team was working in silos of distinct
   competencies and the work on a new feature flowed from one team to the other
   in a beautiful waterfall process without a clear owner. There were also many
   features in parallel in each team. In the end, this resulted in a lot of back
-  and forth around data quality and in delays in the delivery.
+  and forth internally around data quality. We had to rework algorithms several
+  times before going to production and we were late in the delivery compared to
+  what was first announced to business teams and customers.
 
 ![waterfall](/assets/images/waterfall.jpg)
 
@@ -133,13 +135,17 @@ We then decided to split our teams into two groups:
     - and we plan to create more as we start working on more new modules!
 - **platform teams** that are focused on providing data, algorithms and R&D
   supporting one or more JTBD. We currently have three of them:
-    - one for our *pedestrian flow* algorithm
-    - one for our *vehicle flow* algorithm
+    - one for our *pedestrian flow* algorithm which aims at computing the
+      number of pedestrians passing by a given address on a given week
+    - one for our *vehicle flow* algorithm which aims at computing the number
+      of… you guessed it… vehicles! passing by a given address on a given week
     - one team focused on data quality & monitoring
 
-Why make this distinction between user and platform teams you may ask?
-Aren't you back to the initial situation with component teams, waterfall, and
-so on? Very good question! In fact we realized that it did not make sense to
+{% include question.html content="Why make this distinction between user and
+platform teams you may ask? Aren't you back to the initial situation with
+component teams, waterfall, and so on?" %}
+
+Very good question! In fact we realized that it did not make sense to
 try to smash together our data generation and data presentation activities in
 fully cross-functional (from R&D data scientists to web designers) teams.
 
