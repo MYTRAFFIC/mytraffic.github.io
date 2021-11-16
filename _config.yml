@@ -14,7 +14,7 @@ authors:
   sdiemer:
     name: sdiemer
     display_name: Sébastien Diemer
-    avatar: '/assets/images/sdiemer.png'
+    avatar: '/assets/images/sdiemer.jpg'
     email: sdiemer@mytraffic.fr
     twitter: https://twitter.com/sebdiem
     description: "CTO at mytraffic since 2019"
@@ -32,6 +32,7 @@ authors:
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jemoji
 
 # Other
 markdown: kramdown
