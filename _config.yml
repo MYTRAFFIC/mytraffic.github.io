@@ -26,6 +26,20 @@ authors:
     description: |
       Data Engineering lead at MyTraffic.
       I love good code, good food, and nitpicking about naming :)
+  dtang:
+    name: dtang
+    display_name: 'David Tang'
+    email: dtang@mytraffic.fr
+    avatar: '/assets/images/dtang.jpg'
+    description: |
+      Data Scientist at MyTraffic.
+  laura:
+    name: laura
+    display_name: 'Laura Dominique'
+    email: ldominique@mytraffic.fr
+    avatar: '/assets/images/laura.jpg'
+    description: |
+      CPO at MyTraffic
 
 
 # Plugins (should be available with github pages => https://pages.github.com/versions/)
